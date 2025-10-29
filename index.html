@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista interactiva de 15 plantas medicinales con recetas, videos, favoritos y modo oscuro.">
+    <title>Plantas Medicinales Interactivas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="overlay">
+            <h1>Listado de Plantas Medicinales</h1>
+            <p>Explora 15 remedios naturales con recetas, videos y favoritos.</p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul id="nav-list"></ul>
+        </nav>
+    </header>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button id="theme-toggle" class="btn btn-theme">Modo Oscuro</button>
+        <button id="show-favorites" class="btn" style="background:#e91e63;color:white;">
+            Ver Favoritos (<span id="fav-count">0</span>)
+        </button>
+    </div>
+
+    <!-- Búsqueda -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Busca: aloe, tos, digestión...">
+    </div>
+
+    <!-- Main Content -->
+    <main id="content">
+
+        <!-- 1. ALOE VERA -->
+        <section class="plant-section" id="aloe">
+            <div class="plant-header">
+                <h2>Aloe Vera</h2>
+                <div>
+                    <button class="favorite-btn" data-id="aloe"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\Aloe_vera_370x425.jpg" alt="Aloe Vera" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Aloe+Vera'">
+            <h3>Nombre científico:</h3>
+            <p><em>Aloe barbadensis miller</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta suculenta originaria de la Península Arábiga, conocida por su gel transparente con propiedades curativas para la piel y digestión.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Quemaduras leves y solares</li>
+                <li>Irritaciones cutáneas</li>
+                <li>Acné</li>
+                <li>Heridas superficiales</li>
+                <li>Estreñimiento</li>
+                <li>Psoriasis</li>
+            </ul>
+            <h3>Receta casera: Gel de Aloe para la piel</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 hoja grande de Aloe Vera</li>
+                <li>1 cucharadita de aceite de coco (opcional)</li>
+                <li>Frasco de vidrio</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Lava bien la hoja.</li>
+                <li>Corta los bordes y abre por la mitad.</li>
+                <li>Extrae el gel con una cuchara.</li>
+                <li>Licúa (opcional: con aceite de coco).</li>
+                <li>Guarda en refrigerador (dura 5-7 días).</li>
+                <li>Aplica en piel afectada.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="aloe">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=GbKZoV9b484" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 2. MANZANILLA -->
+        <section class="plant-section" id="manzanilla">
+            <div class="plant-header">
+                <h2>Manzanilla</h2>
+                <div>
+                    <button class="favorite-btn" data-id="manzanilla"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\manzanilla-sirve-10112023.jpg" alt="Manzanilla" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Manzanilla'">
+            <h3>Nombre científico:</h3>
+            <p><em>Matricaria recutita</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta herbácea anual con flores blancas, conocida por sus propiedades calmantes y digestivas.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Indigestión y gases</li>
+                <li>Insomnio y ansiedad</li>
+                <li>Dolores menstruales</li>
+                <li>Irritaciones en la piel</li>
+                <li>Cólicos estomacales</li>
+            </ul>
+            <h3>Receta casera: Té de Manzanilla</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 cucharada de flores secas</li>
+                <li>1 taza de agua caliente</li>
+                <li>Miel (opcional)</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Coloca las flores en una taza.</li>
+                <li>Vierte agua hirviendo.</li>
+                <li>Cubre y deja reposar 5 minutos.</li>
+                <li>Cuela y endulza si deseas.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="manzanilla">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=sU1lJ1leyMk" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 3. MENTA -->
+        <section class="plant-section" id="menta">
+            <div class="plant-header">
+                <h2>Menta</h2>
+                <div>
+                    <button class="favorite-btn" data-id="menta"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\menta.jpg" alt="Menta" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Menta'">
+            <h3>Nombre científico:</h3>
+            <p><em>Mentha piperita</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta aromática refrescante, ideal para problemas digestivos y respiratorios.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Dolor de cabeza</li>
+                <li>Náuseas</li>
+                <li>Indigestión</li>
+                <li>Resfriados</li>
+                <li>Mal aliento</li>
+            </ul>
+            <h3>Receta casera: Té de menta digestivo</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>10 hojas frescas de menta</li>
+                <li>1 taza de agua caliente</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Lava las hojas.</li>
+                <li>Colócalas en una taza.</li>
+                <li>Vierte agua hirviendo.</li>
+                <li>Deja reposar 5 minutos.</li>
+                <li>Cuela y bebe.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="menta">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 4. JENGIBRE -->
+        <section class="plant-section" id="jengibre">
+            <div class="plant-header">
+                <h2>Jengibre</h2>
+                <div>
+                    <button class="favorite-btn" data-id="jengibre"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\jengibre.jpg" alt="Jengibre" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Jengibre'">
+            <h3>Nombre científico:</h3>
+            <p><em>Zingiber officinale</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Raíz picante con propiedades antiinflamatorias, ideal para náuseas y resfriados.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Náuseas y mareos</li>
+                <li>Dolor muscular</li>
+                <li>Resfriados</li>
+                <li>Artritis</li>
+            </ul>
+            <h3>Receta casera: Té de jengibre</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 trozo de 3 cm de jengibre fresco</li>
+                <li>1 taza de agua</li>
+                <li>Miel y limón (opcional)</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Pela y ralla el jengibre.</li>
+                <li>Hierve con agua 10 minutos.</li>
+                <li>Cuela y agrega miel/limón.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="jengibre">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 5. CALÉNDULA -->
+        <section class="plant-section" id="calendula">
+            <div class="plant-header">
+                <h2>Caléndula</h2>
+                <div>
+                    <button class="favorite-btn" data-id="calendula"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\cuidados-calendula.jpg" alt="Caléndula" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Caléndula'">
+            <h3>Nombre científico:</h3>
+            <p><em>Calendula officinalis</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Flor naranja con propiedades cicatrizantes y antiinflamatorias.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Heridas</li>
+                <li>Eccema</li>
+                <li>Picaduras</li>
+                <li>Quemaduras leves</li>
+            </ul>
+            <h3>Receta casera: Aceite de caléndula</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Flores secas de caléndula</li>
+                <li>Aceite de oliva</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Llena un frasco con flores.</li>
+                <li>Cubre con aceite.</li>
+                <li>Deja al sol 2 semanas.</li>
+                <li>Cuela y guarda.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="calendula">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 6. LAVANDA -->
+        <section class="plant-section" id="lavanda">
+            <div class="plant-header">
+                <h2>Lavanda</h2>
+                <div>
+                    <button class="favorite-btn" data-id="lavanda"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\e39eb3f69c59.jpg" alt="Lavanda" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Lavanda'">
+            <h3>Nombre científico:</h3>
+            <p><em>Lavandula angustifolia</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta aromática relajante, ideal para estrés y sueño.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Ansiedad</li>
+                <li>Insomnio</li>
+                <li>Dolores de cabeza</li>
+                <li>Picaduras</li>
+            </ul>
+            <h3>Receta casera: Almohada relajante</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Flores secas de lavanda</li>
+                <li>Tela de algodón</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Llena una bolsita con flores.</li>
+                <li>Cose y coloca bajo la almohada.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="lavanda">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 7. ROMERO -->
+        <section class="plant-section" id="romero">
+            <div class="plant-header">
+                <h2>Romero</h2>
+                <div>
+                    <button class="favorite-btn" data-id="romero"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\romeroiStock.jpg" alt="Romero" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Romero'">
+            <h3>Nombre científico:</h3>
+            <p><em>Rosmarinus officinalis</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Arbusto aromático que mejora memoria y circulación.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Fatiga mental</li>
+                <li>Dolor muscular</li>
+                <li>Caída del cabello</li>
+            </ul>
+            <h3>Receta casera: Aceite de romero</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Ramas frescas</li>
+                <li>Aceite de oliva</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Macerar 2 semanas.</li>
+                <li>Colar y usar en masajes.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="romero">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 8. VALERIANA -->
+        <section class="plant-section" id="valeriana">
+            <div class="plant-header">
+                <h2>Valeriana</h2>
+                <div>
+                    <button class="favorite-btn" data-id="valeriana"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\valeriana-officinalis_00000000_76c1670a_230530150739_1280x720.jpg" alt="Valeriana" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Valeriana'">
+            <h3>Nombre científico:</h3>
+            <p><em>Valeriana officinalis</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Raíz sedante natural para el sueño y ansiedad.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Insomnio</li>
+                <li>Ansiedad</li>
+                <li>Nervios</li>
+            </ul>
+            <h3>Receta casera: Infusión para dormir</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 cucharadita de raíz seca</li>
+                <li>1 taza de agua</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve 5 minutos.</li>
+                <li>Cuela y bebe antes de dormir.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="valeriana">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 9. ORTIGA -->
+        <section class="plant-section" id="ortiga">
+            <div class="plant-header">
+                <h2>Ortiga</h2>
+                <div>
+                    <button class="favorite-btn" data-id="ortiga"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\F0000002727_ortiga_planta_soria_natural.jpg.jpg" alt="Ortiga" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Ortiga'">
+            <h3>Nombre científico:</h3>
+            <p><em>Urtica dioica</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta rica en minerales, usada para anemia y cabello.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Anemia</li>
+                <li>Caída del cabello</li>
+                <li>Artritis</li>
+            </ul>
+            <h3>Receta casera: Té de ortiga</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Hojas secas</li>
+                <li>Agua caliente</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Infusionar 10 minutos.</li>
+                <li>Tomar 1-2 tazas al día.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="ortiga">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 10. EUCALIPTO -->
+        <section class="plant-section" id="eucalipto">
+            <div class="plant-header">
+                <h2>Eucalipto</h2>
+                <div>
+                    <button class="favorite-btn" data-id="eucalipto"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\las-6-valiosas-propiedades-medicinales-del-eucalipto-y-como-consumirlo-24-07-2024.jpg" alt="Eucalipto" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Eucalipto'">
+            <h3>Nombre científico:</h3>
+            <p><em>Eucalyptus globulus</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Árbol con hojas antisépticas para vías respiratorias.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Resfriados</li>
+                <li>Tos</li>
+                <li>Congestión</li>
+                <li>Sinusitis</li>
+            </ul>
+            <h3>Receta casera: Vapor de eucalipto</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Hojas frescas</li>
+                <li>Agua caliente</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve hojas.</li>
+                <li>Inhala el vapor con toalla.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="eucalipto">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 11. TOMILLO -->
+        <section class="plant-section" id="tomillo">
+            <div class="plant-header">
+                <h2>Tomillo</h2>
+                <div>
+                    <button class="favorite-btn" data-id="tomillo"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\tomillo.jpg" alt="Tomillo" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Tomillo'">
+            <h3>Nombre científico:</h3>
+            <p><em>Thymus vulgaris</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Hierba antiséptica y expectorante.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Tos</li>
+                <li>Bronquitis</li>
+                <li>Infecciones</li>
+                <li>Garganta irritada</li>
+            </ul>
+            <h3>Receta casera: Infusión para la tos</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 cucharada de tomillo</li>
+                <li>1 taza de agua</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve 5 minutos.</li>
+                <li>Cuela y bebe caliente.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="tomillo">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 12. SALVIA -->
+        <section class="plant-section" id="salvia">
+            <div class="plant-header">
+                <h2>Salvia</h2>
+                <div>
+                    <button class="favorite-btn" data-id="salvia"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\pngtree-salvia-plants-isolated-on-white-transparent-background-png-image_18128752.png" alt="Salvia" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Salvia'">
+            <h3>Nombre científico:</h3>
+            <p><em>Salvia officinalis</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta antiséptica y digestiva, ideal para garganta y menopausia.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Sudoración excesiva</li>
+                <li>Menopausia</li>
+                <li>Garganta irritada</li>
+            </ul>
+            <h3>Receta casera: Gárgaras de salvia</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>Hojas frescas</li>
+                <li>Agua caliente</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Infusionar 10 minutos.</li>
+                <li>Hacer gárgaras 3 veces al día.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="salvia">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 13. HIERBABUENA -->
+        <section class="plant-section" id="hierbabuena">
+            <div class="plant-header">
+                <h2>Hierbabuena</h2>
+                <div>
+                    <button class="favorite-btn" data-id="hierbabuena"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\F0000008518_plantas_web_ok_peppermint.jpg" alt="Hierbabuena" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Hierbabuena'">
+            <h3>Nombre científico:</h3>
+            <p><em>Mentha spicata</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Similar a la menta, excelente para digestión y aliento fresco.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Indigestión</li>
+                <li>Gases</li>
+                <li>Mal aliento</li>
+            </ul>
+            <h3>Receta casera: Té de hierbabuena</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>10 hojas frescas</li>
+                <li>1 taza de agua caliente</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Lava las hojas.</li>
+                <li>Infusiona 5 minutos.</li>
+                <li>Cuela y bebe.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="hierbabuena">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 14. DIENTE DE LEÓN -->
+        <section class="plant-section" id="dienteleon">
+            <div class="plant-header">
+                <h2>Diente de León</h2>
+                <div>
+                    <button class="favorite-btn" data-id="dienteleon"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\279v1n1-13108647fig01.jpg" alt="Diente de León" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Diente+de+León'">
+            <h3>Nombre científico:</h3>
+            <p><em>Taraxacum officinale</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta diurética y depurativa para hígado y riñones.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Retención de líquidos</li>
+                <li>Problemas hepáticos</li>
+                <li>Estreñimiento</li>
+            </ul>
+            <h3>Receta casera: Infusión de hojas</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 cucharada de hojas secas</li>
+                <li>1 taza de agua</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve 5 minutos.</li>
+                <li>Cuela y bebe 1-2 veces al día.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="dienteleon">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+        <!-- 15. EQUINÁCEA -->
+        <section class="plant-section" id="equinacea">
+            <div class="plant-header">
+                <h2>Equinácea</h2>
+                <div>
+                    <button class="favorite-btn" data-id="equinacea"><i class="far fa-heart"></i></button>
+                    <span class="view-count">0 vistas</span>
+                </div>
+            </div>
+            <img src="e:\PLANTAS MEDICINALES\IMAGEN\e4021c4ebe09-cuidados-equinacea-t.jpg" alt="Equinácea" class="decorate" onerror="this.src='https://via.placeholder.com/400x300?text=Equinácea'">
+            <h3>Nombre científico:</h3>
+            <p><em>Echinacea purpurea</em></p>
+            <h3>Descripción breve:</h3>
+            <p>Planta que fortalece el sistema inmunológico.</p>
+            <h3>¿Qué enfermedades trata?</h3>
+            <ul>
+                <li>Resfriados</li>
+                <li>Gripe</li>
+                <li>Infecciones respiratorias</li>
+            </ul>
+            <h3>Receta casera: Té de equinácea</h3>
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 cucharadita de raíz seca</li>
+                <li>1 taza de agua</li>
+            </ul>
+            <p><strong>Instrucciones:</strong></p>
+            <ol>
+                <li>Hierve 10 minutos.</li>
+                <li>Cuela y bebe al inicio de un resfriado.</li>
+            </ol>
+            <button class="copy-btn" data-recipe="equinacea">Copiar Receta</button>
+            <h3>Video de la receta:</h3>
+            <p><a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener">Ver en YouTube</a></p>
+        </section>
+
+    </main>
+
+    <!-- Botón Volver Arriba -->
+    <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+    <footer>
+        <p>© 2025 Plantas Medicinales Interactivas | <a href="#">Política de Privacidad</a></p>
+    </footer>
+
+    <script>
+        // Generar navegación
+        document.querySelectorAll('.plant-section').forEach(s => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#${s.id}" class="nav-link">${s.querySelector('h2').textContent}</a>`;
+            document.getElementById('nav-list').appendChild(li);
+        });
+
+        // Interacciones (modo oscuro, favoritos, búsqueda, etc.)
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const backToTop = document.getElementById('back-to-top');
+        const searchInput = document.getElementById('search-input');
+        const showFavorites = document.getElementById('show-favorites');
+        const favCount = document.getElementById('fav-count');
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            themeToggle.innerHTML = isDark ? 'Modo Oscuro' : 'Modo Claro';
+        });
+
+        function updateFavorites() {
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            favCount.textContent = favorites.length;
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                const id = btn.dataset.id;
+                btn.innerHTML = favorites.includes(id) ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>';
+                btn.classList.toggle('active', favorites.includes(id));
+            });
+        }
+
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.id;
+                let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+                favorites = favorites.includes(id) ? favorites.filter(f => f !== id) : [...favorites, id];
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                updateFavorites();
+            });
+        });
+
+        let showingFavorites = false;
+        showFavorites.addEventListener('click', () => {
+            showingFavorites = !showingFavorites;
+            const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            document.querySelectorAll('.plant-section').forEach(s => {
+                s.style.display = showingFavorites ? (favorites.includes(s.id) ? 'block' : 'none') : 'block';
+            });
+            showFavorites.innerHTML = showingFavorites ? 'Ver Todas' : `Ver Favoritos (<span id="fav-count">0</span>)`;
+            updateFavorites();
+        });
+
+        const observer = new IntersectionObserver(e => e.forEach(en => {
+            if (en.isIntersecting) {
+                const id = en.target.id;
+                let views = JSON.parse(localStorage.getItem('views') || '{}');
+                views[id] = (views[id] || 0) + 1;
+                localStorage.setItem('views', JSON.stringify(views));
+                en.target.querySelector('.view-count').textContent = `${views[id]} vista${views[id]>1?'s':''}`;
+            }
+        }), { threshold: 0.5 });
+        document.querySelectorAll('.plant-section').forEach(s => observer.observe(s));
+
+        window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 300));
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(l.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }));
+
+        searchInput.addEventListener('input', () => {
+            const q = searchInput.value.toLowerCase().trim();
+            document.querySelectorAll('.plant-section').forEach(s => {
+                const text = s.textContent.toLowerCase();
+                const h2 = s.querySelector('h2');
+                if (q === '') {
+                    s.classList.remove('hidden');
+                    h2.innerHTML = h2.textContent;
+                } else if (text.includes(q)) {
+                    s.classList.remove('hidden');
+                    h2.innerHTML = h2.textContent.replace(new RegExp(`(${q})`, 'gi'), '<span class="highlight">$1</span>');
+                } else {
+                    s.classList.add('hidden');
+                }
+            });
+        });
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const section = btn.closest('.plant-section');
+                const title = section.querySelector('h2').textContent;
+                const ingredients = Array.from(section.querySelectorAll('strong:contains("Ingredientes") ~ ul li')).map(li => `- ${li.textContent}`).join('\n');
+                const steps = Array.from(section.querySelectorAll('strong:contains("Instrucciones") ~ ol li')).map((li, i) => `${i+1}. ${li.textContent}`).join('\n');
+                const text = `${title}\n\nIngredientes:\n${ingredients}\n\nPasos:\n${steps}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    btn.textContent = '¡Copiado!';
+                    setTimeout(() => btn.textContent = 'Copiar Receta', 2000);
+                });
+            });
+        });
+
+        const animate = new IntersectionObserver(e => e.forEach(en => {
+            if (en.isIntersecting) en.target.classList.add('visible');
+        }), { threshold: 0.1 });
+        document.querySelectorAll('.plant-section').forEach(s => animate.observe(s));
+
+        updateFavorites();
+    </script>
+</body>
+</html>
